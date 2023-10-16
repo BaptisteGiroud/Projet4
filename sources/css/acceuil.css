@@ -1,5 +1,219 @@
+@import url(../css/restaurants.css);
+/* Variables */
+/* Global value */
+h1 {
+  font-family: "Shrikhand", serif;
+}
+
+h2, h3, p {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: medium;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: x-large;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Top bar */
 body {
-  background-color: red;
+  margin: 0;
+}
+
+header {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  margin: 0;
+}
+header img {
+  display: flex;
+  padding: 14px;
+  margin: auto;
+  width: 165px;
+}
+
+/* Localisation bar */
+.localisation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #EAEAEA;
+  gap: 17px;
+}
+
+/* Section button */
+.section_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.section_button h3 {
+  font-size: x-large;
+  margin: 0 50px 10px 50px;
+}
+.section_button p {
+  margin: 0 30px;
+  font-size: large;
+}
+.section_button h2 {
+  margin: 35px 0 30px 0;
+  font-weight: 500;
+}
+.section_button .button {
+  padding: 15px;
+  width: 200px;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(#FF79DA -25%, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 200ms;
+}
+.section_button .button:hover {
+  filter: brightness(1.15);
+}
+
+/* Section fonctionnement */
+.section_fonctionnement {
+  margin: 50px 20px;
+}
+.section_fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 15px;
+}
+.section_fonctionnement li::before {
+  content: counter(list-item);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: 42px;
+  right: 10px;
+  color: white;
+  padding: 6px;
+  background-color: #9356DC;
+  clip-path: circle();
+}
+.section_fonctionnement li:hover .fa-mobile {
+  color: #9356DC;
+}
+.section_fonctionnement li:hover .fa-list {
+  color: #9356DC;
+}
+.section_fonctionnement li:hover .fa-store {
+  color: #9356DC;
+}
+.section_fonctionnement li div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  gap: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Restaurants */
+.restaurants h2 {
+  font-size: large;
+}
+
+.restaurants p {
+  font-size: 17px;
+}
+
+.empty-heart {
+  color: black;
+}
+
+.restaurants {
+  padding: 40px 0 60px 0;
+  background-color: #F6F6F6;
+  margin-bottom: 0;
+}
+.restaurants h3 {
+  padding-left: 20px;
+}
+.restaurants_liste {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.restaurants_liste_resto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 250px;
+  width: auto;
+  margin: 0 20px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.restaurants_liste_resto:hover .empty-heart {
+  color: #9356DC;
+}
+.restaurants_liste_resto img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants_liste_resto_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 15px;
+}
+.restaurants_liste_resto_content h2, .restaurants_liste_resto_content p {
+  margin: 0;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  width: auto;
+  padding: 15px 20px;
+}
+
+.footer .fa-utensils, .footer .fa-handshake {
+  color: white;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer p {
+  color: white;
+  margin: 7px;
+}
+.footer_logo {
+  font-family: shrikhand;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=acceuil.css.map */
