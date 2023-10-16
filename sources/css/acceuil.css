@@ -1,4 +1,3 @@
-@import url(../css/restaurants.css);
 /* Variables */
 /* Global value */
 h1 {
@@ -91,6 +90,30 @@ header img {
 }
 .section_button .button:hover {
   filter: brightness(1.15);
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  width: auto;
+  padding: 15px 20px;
+}
+
+.footer .fa-utensils, .footer .fa-handshake {
+  color: white;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer p {
+  color: white;
+  margin: 7px;
+}
+.footer_logo {
+  font-family: "Shrikhand", serif;
+  font-size: 1.1rem;
 }
 
 /* Section fonctionnement */
@@ -190,30 +213,6 @@ header img {
 .restaurants_liste_resto_content h2, .restaurants_liste_resto_content p {
   margin: 0;
   color: black;
-}
-
-/* Footer */
-footer {
-  background-color: #353535;
-  width: auto;
-  padding: 15px 20px;
-}
-
-.footer .fa-utensils, .footer .fa-handshake {
-  color: white;
-}
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.footer p {
-  color: white;
-  margin: 7px;
-}
-.footer_logo {
-  font-family: shrikhand;
-  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=acceuil.css.map */
