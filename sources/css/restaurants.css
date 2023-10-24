@@ -90,6 +90,38 @@ header img {
 }
 .section_button .button:hover {
   filter: brightness(1.15);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Heart container */
+.empty-heart {
+  color: black;
+}
+.empty-heart:hover {
+  color: #9356DC;
+}
+
+.full-heart {
+  color: #9356DC;
+}
+
+.heart_container {
+  display: flex;
+  align-items: center;
+}
+.heart_container .full-heart {
+  display: none;
+}
+
+input[type=checkbox] {
+  appearance: none;
+}
+
+input:checked + label .empty-heart {
+  display: none;
+}
+input:checked + label .full-heart {
+  display: flex;
 }
 
 /* Footer */
@@ -112,8 +144,98 @@ footer {
   margin: 7px;
 }
 .footer_logo {
-  font-family: shrikhand;
+  font-family: "Shrikhand", serif;
   font-size: 1.1rem;
+}
+
+.section_cards {
+  max-width: 1055px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1023.5px) {
+  body .section_fonctionnement {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  body .section_fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+  }
+  body .section_fonctionnement ul li {
+    width: 325px;
+    margin-right: 24px;
+  }
+  body .restaurants_contents {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .restaurants_liste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .restaurants_liste_resto--new {
+    transform: scale(1);
+  }
+  .footer {
+    display: flex;
+    justify-content: end;
+  }
+  .footer_1 {
+    order: 5;
+    padding: 0 50px;
+  }
+  .footer_2 {
+    margin-left: 20px;
+  }
+}
+/* Fonctionnement liste */
+.section_fonctionnement li div {
+  transition: all 300ms;
+}
+.section_fonctionnement li div:hover {
+  color: #9356DC;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Entrees Plats Dessert */
+main .section_cards {
+  overflow: hidden;
+}
+main .section_cards .card {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slide 350ms forwards;
+}
+main .section_cards .card_1 {
+  animation-delay: 0ms;
+}
+main .section_cards .card_2 {
+  animation-delay: 100ms;
+}
+main .section_cards .card_3 {
+  animation-delay: 200ms;
+}
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/* Nav */
+.fa-arrow-left {
+  color: black;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 
 /* Main structure */

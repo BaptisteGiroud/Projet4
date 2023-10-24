@@ -90,6 +90,38 @@ header img {
 }
 .section_button .button:hover {
   filter: brightness(1.15);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Heart container */
+.empty-heart {
+  color: black;
+}
+.empty-heart:hover {
+  color: #9356DC;
+}
+
+.full-heart {
+  color: #9356DC;
+}
+
+.heart_container {
+  display: flex;
+  align-items: center;
+}
+.heart_container .full-heart {
+  display: none;
+}
+
+input[type=checkbox] {
+  appearance: none;
+}
+
+input:checked + label .empty-heart {
+  display: none;
+}
+input:checked + label .full-heart {
+  display: flex;
 }
 
 /* Footer */
@@ -116,6 +148,88 @@ footer {
   font-size: 1.1rem;
 }
 
+.section_cards {
+  max-width: 1055px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1023.5px) {
+  body .section_fonctionnement {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  body .section_fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+  }
+  body .section_fonctionnement ul li {
+    width: 325px;
+    margin-right: 24px;
+  }
+  body .restaurants_contents {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .restaurants_liste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .restaurants_liste_resto--new {
+    transform: scale(1);
+  }
+  .footer {
+    display: flex;
+    justify-content: end;
+  }
+  .footer_1 {
+    order: 5;
+    padding: 0 50px;
+  }
+  .footer_2 {
+    margin-left: 20px;
+  }
+}
+/* Fonctionnement liste */
+.section_fonctionnement li div {
+  transition: all 300ms;
+}
+.section_fonctionnement li div:hover {
+  color: #9356DC;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Entrees Plats Dessert */
+main .section_cards {
+  overflow: hidden;
+}
+main .section_cards .card {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slide 350ms forwards;
+}
+main .section_cards .card_1 {
+  animation-delay: 0ms;
+}
+main .section_cards .card_2 {
+  animation-delay: 100ms;
+}
+main .section_cards .card_3 {
+  animation-delay: 200ms;
+}
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 /* Section fonctionnement */
 .section_fonctionnement {
   margin: 50px 20px;
@@ -124,7 +238,7 @@ footer {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 .section_fonctionnement li::before {
   content: counter(list-item);
@@ -136,15 +250,6 @@ footer {
   padding: 6px;
   background-color: #9356DC;
   clip-path: circle();
-}
-.section_fonctionnement li:hover .fa-mobile {
-  color: #9356DC;
-}
-.section_fonctionnement li:hover .fa-list {
-  color: #9356DC;
-}
-.section_fonctionnement li:hover .fa-store {
-  color: #9356DC;
 }
 .section_fonctionnement li div {
   display: flex;
@@ -167,17 +272,13 @@ footer {
   font-size: 17px;
 }
 
-.empty-heart {
-  color: black;
-}
-
 .restaurants {
   padding: 40px 0 60px 0;
   background-color: #F6F6F6;
   margin-bottom: 0;
 }
 .restaurants h3 {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 .restaurants_liste {
   display: grid;
@@ -193,9 +294,6 @@ footer {
   margin: 0 20px;
   box-sizing: border-box;
   background-color: white;
-}
-.restaurants_liste_resto:hover .empty-heart {
-  color: #9356DC;
 }
 .restaurants_liste_resto img {
   height: 170px;
@@ -214,5 +312,17 @@ footer {
   margin: 0;
   color: black;
 }
+.restaurants_liste_resto--new {
+  transform: scale(0.9);
+  align-self: self-end;
+  margin-right: 15px;
+  position: absolute;
+  color: #008766;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
 
-/*# sourceMappingURL=acceuil.css.map */
+/*# sourceMappingURL=accueil.css.map */

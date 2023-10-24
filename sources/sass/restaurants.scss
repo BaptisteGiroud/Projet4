@@ -1,5 +1,17 @@
 @import "variables";
 @import "global";
+@import "responsive";
+@import "animations";
+
+
+/* Nav */
+
+.fa-arrow-left {
+    color:  black;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
 
 /* Main structure */
 
