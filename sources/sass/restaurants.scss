@@ -40,8 +40,12 @@ body h1 {
 .main_title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 30px;
+}
+
+.heart_container {
+    margin: 0 0 0 20px;
 }
 
 /* La carte */
@@ -64,6 +68,9 @@ body h1 {
     box-sizing: border-box;
     box-shadow: 0 4px 15px 0 rgba($color: #000000, $alpha: 0.1);
     margin-bottom: 10px;
+    display: flex;
+    overflow: hidden;
+    height: 68px;
     h2,p {
         margin: 0;
     }
@@ -72,13 +79,29 @@ body h1 {
         justify-content: space-between;
         font-size: 15px;
     }
+    &_text {
+        width: 100%;
+    }
+}
+
+/* Checkbox */
+
+.checkbox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: -100px;
+    padding-left: 10px;
+    color: $primary-color;
+    transition: all 200ms;
 }
 
 /* Button */
 
 main .section_button {
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 0;
+    border: none;
     h2 {
         margin: 30px 0 0 0;
     }

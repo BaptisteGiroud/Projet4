@@ -111,7 +111,9 @@ header {
 
 .heart_container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-right: 40px;
+  margin-top: -80px;
   .full-heart {
   display: none;
   }
@@ -127,6 +129,7 @@ input:checked + label {
   }
   .full-heart {
       display: flex;
+      height: 24px;
   }
 }
 

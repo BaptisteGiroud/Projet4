@@ -30,6 +30,27 @@ main {
             &_3 {
                 animation-delay: 200ms;
             }
+            &_4 {
+                animation-delay: 300ms;
+            }
+            &_5 {
+                animation-delay: 400ms;
+            }
+            &_6 {
+                animation-delay: 500ms;
+            }
+            &_7 {
+                animation-delay: 600ms;
+            }
+            &_8 {
+                animation-delay: 700ms;
+            }
+            &_9 {
+                animation-delay: 800ms;
+            }
+            &_10 {
+                animation-delay: 900ms;
+            }
         }
     }
 }
@@ -39,4 +60,75 @@ main {
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+/* Loader */
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    animation: disparition 3s forwards;
+    &_loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: fixed;
+        top: calc(50% - 24px);
+        left: calc(50% - 24px);
+        animation: rotation_global 3s linear forwards;
+        &::before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            inset: 0px;
+            border-radius: 50%;
+            border: 7px solid $primary-color;
+            animation: rotations 3s linear forwards;
+         }
+     }
+}
+
+@keyframes disparition {
+    100% {display: none;}
+}
+
+@keyframes rotations {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    99% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    100% {display: none;}
+}
+
+@keyframes rotation_global {
+    99%   {transform: rotate(360deg)}
+    100% {display: none;}
+}
+
+/* Checkbox */
+
+.card {
+    &:hover {
+        .checkbox {
+            margin-right: 0px;
+        }
+    }
+    &:has(input:checked) {
+        border: solid $primary-color 2px;
+        padding: 13px;
+    }
+}
+
+.checkbox:has(input:checked) {
+    margin-right: 0px;
+}
+
+/* cursor pointer */
+
+.card,.full-heart,.empty-heart {
+    cursor: pointer;
 }

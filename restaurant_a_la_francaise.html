@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood : À la française</title>
+    <title>Ohmyfood - À la française</title>
     <link rel="stylesheet" href="sources/css/restaurants.css">
     <script src="https://kit.fontawesome.com/98582c18d8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,12 @@
     <header>
         <a href="index.html">
             <i class="fa-solid fa-arrow-left fa-xl"></i>
-            <h1><img src="Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="ohmyfood"></h1>             
+            <h1><img src="Images_et_textes_Ohmyfood/images/logo/ohmyfood2x.svg" alt="ohmyfood"></h1>             
         </a>
     </header>
 
     <main>
-        <img src="Images et textes Ohmyfood/images/restaurants/à-la-française.jpg">
+        <img src="Images_et_textes_Ohmyfood/images/restaurants/à-la-française.jpg" alt="Photo du restaurant à la française">
 
         <section class="section_cards">
             <div class="main_title">
@@ -38,13 +38,19 @@
             <div class="section">
                 <p class="title">Entrées</p>
 
-                <div class="card card_1">
-                    <h2>Tartare de poulpe acidulé</h2>
-                    <div class="card_price">
-                        <p>Aux zestes d'orange</p>
-                        <h2>25€</h2>
+                <label for="mark" class="card card_1">
+                    <div class="card_text">
+                        <h2>Tartare de poulpe acidulé</h2>
+                        <div class="card_price">
+                            <p>Aux zestes d'orange</p>
+                            <h2>25€</h2>
+                        </div>
                     </div>
-                </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="mark" name="mark">
+                        <i class="fa-solid fa-check fa-lg"></i>
+                    </div>
+                </label>
 
                 <div class="card card_2">
                     <h2>Velouté de légumes d'antan</h2>
@@ -61,11 +67,12 @@
                         <h2>20€</h2>
                     </div>
                 </div>
+            </div>
 
             <div class="section">
                 <p class="title">Plats</p>
 
-                <div class="card">
+                <div class="card card_4">
                     <h2>Coquilles Saint-Jacques</h2>
                     <div class="card_price">
                         <p>Accompagnées d'une purée de panais</p>
@@ -73,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card card_5">
                     <h2>Magret de canard</h2>
                     <div class="card_price">
                         <p>Et parmentier de pommes de terre</p>
@@ -81,7 +88,7 @@
                     </div>
                 </div>     
 
-                <div class="card">
+                <div class="card card_6">
                     <h2>Pigeonneau d’Ille-et-Vilaine</h2>
                     <div class="card_price">
                         <p>Sur son lit de gnocchis aux légumes</p>
@@ -93,7 +100,7 @@
             <div class="section">
                 <p class="title">Desserts</p>
 
-                <div class="card">
+                <div class="card card_7">
                     <h2>Pétales de violettes glacés</h2>
                     <div class="card_price">
                         <p>Et purée de noisettes</p>
@@ -101,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card card_8">
                     <h2>Fondant au chocolat</h2>
                     <div class="card_price">
                         <p>Revisité</p>
@@ -109,7 +116,7 @@
                     </div>
                 </div>     
 
-                <div class="card">
+                <div class="card card_9">
                     <h2>Millefeuille croustillant</h2>
                     <div class="card_price">
                         <p>Myrtilles et pâte d’amande</p>
@@ -117,17 +124,15 @@
                     </div>
                 </div>
                 
-                <div class="section_button">
-                    <a href="#">
-                        <h2 class="button">Commander</h2>
-                    </a>
-                </div>
+                <button class="section_button" type="submit">
+                    <h2 class="button">Commander</h2>
+                </button>
             </div>
         </section>
     </main>
 
     <footer>
-        <article class="footer">
+        <div class="footer">
             <a href="index.html" class="footer_1">
                 <p class="footer_logo">ohmyfood</p>
             </a>
@@ -145,7 +150,7 @@
             <a href="#" class="footer_2">
                 <p>Contact</p>
             </a>
-        </article>
+        </div>
     </footer>
 </body>
 
