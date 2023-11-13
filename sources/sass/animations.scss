@@ -88,7 +88,7 @@ main {
             border: 7px solid $primary-color;
             animation: rotations 3s linear forwards;
          }
-     }
+    }
 }
 
 @keyframes disparition {
@@ -117,14 +117,12 @@ main {
             margin-right: 0px;
         }
     }
-    &:has(input:checked) {
-        border: solid $primary-color 2px;
-        padding: 13px;
-    }
 }
 
-.checkbox:has(input:checked) {
-    margin-right: 0px;
+input:checked + label {
+    .check_mark {
+        color: $primary-color;
+    }
 }
 
 /* cursor pointer */

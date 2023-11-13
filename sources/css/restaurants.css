@@ -56,6 +56,10 @@ header img {
   background-color: #EAEAEA;
   gap: 17px;
 }
+.localisation ::placeholder {
+  color: black;
+  opacity: 1;
+}
 
 /* Section button */
 .section_button {
@@ -319,13 +323,9 @@ main .section_cards .card_10 {
 .card:hover .checkbox {
   margin-right: 0px;
 }
-.card:has(input:checked) {
-  border: solid #9356DC 2px;
-  padding: 13px;
-}
 
-.checkbox:has(input:checked) {
-  margin-right: 0px;
+input:checked + label .check_mark {
+  color: #9356DC;
 }
 
 /* cursor pointer */
@@ -389,7 +389,6 @@ body h1 {
 .card {
   border-radius: 20px;
   background-color: white;
-  padding: 15px;
   box-sizing: border-box;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
@@ -399,24 +398,43 @@ body h1 {
 }
 .card h2, .card p {
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card_price {
+  padding: 15px;
   display: flex;
-  justify-content: space-between;
+  align-items: end;
   font-size: 15px;
 }
 .card_text {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card_text_content {
+  padding: 15px;
+  overflow: hidden;
+}
+.card input {
+  display: flex;
+  margin: 0;
 }
 
 /* Checkbox */
+.price_check {
+  display: flex;
+}
+
 .checkbox {
   display: flex;
   position: relative;
   align-items: center;
-  margin-right: -100px;
-  padding-left: 10px;
-  color: #9356DC;
+  margin-right: -50px;
+  padding: 15px;
+  color: white;
+  background-color: #99E2D0;
   transition: all 200ms;
 }
 

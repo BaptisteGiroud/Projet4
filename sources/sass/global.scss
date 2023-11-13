@@ -57,6 +57,10 @@ header {
   height: 50px;
   background-color: $background-color-darker;
   gap: 17px;
+  ::placeholder {
+    color: black;
+    opacity: 1;
+  }
 }
 
 /* Section button */
